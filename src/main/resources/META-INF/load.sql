@@ -1,0 +1,1 @@
+-- INSERT INTO item (id, name, description, version) VALUES (-1, 'トイレットペーパー', 'desc', 0);

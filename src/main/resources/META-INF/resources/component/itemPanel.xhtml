@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:composite="http://xmlns.jcp.org/jsf/composite">
+
+    <composite:interface>
+        <composite:attribute name="item" required="true" />
+    </composite:interface>
+
+    <composite:implementation>
+        <p:panel header="#{item.name}" styleClass="ui-g-12">
+            <div class="ui-g-12 ui-md-8 ui-lg-4">#{item.description}</div>
+            <div class="ui-g-12 ui-md-4">
+                <p:commandButton value="最後の1個になった" actionListener="#{indexViewController.notifyStockEmpty(cc.attrs.item)}" immediate="true" />
+            </div>
+        </p:panel>
+    </composite:implementation>
+</html>
