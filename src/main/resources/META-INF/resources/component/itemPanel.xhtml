@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:composite="http://xmlns.jcp.org/jsf/composite">
@@ -10,6 +11,13 @@
 
     <composite:implementation>
         <p:panel header="#{item.name}" styleClass="ui-g-12">
+            <f:facet name="actions">
+                <p:commandLink styleClass="ui-panel-titlebar-icon ui-corner-all ui-state-default"
+                    action="#{indexViewController.moveToEditView(cc.attrs.item)}"
+                    immediate="true">
+                    <h:outputText styleClass="ui-icon ui-icon-pencil" />
+                </p:commandLink>
+            </f:facet>
             <div class="ui-g-12 ui-md-8 ui-lg-4">#{item.description}</div>
             <div class="ui-g-12 ui-md-4">
                 <p:commandButton value="最後の1個になった" actionListener="#{indexViewController.notifyStockEmpty(cc.attrs.item)}" immediate="true" />

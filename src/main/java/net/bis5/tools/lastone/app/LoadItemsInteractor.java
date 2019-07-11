@@ -21,8 +21,10 @@ class LoadItemsInteractor implements LoadItemsUseCase {
 
     private ManagedItem convert(Item item) {
         ManagedItem managed = new ManagedItem();
+        managed.setId(item.getId());
         managed.setName(item.getName());
         managed.setDescription(item.getDescription());
+        managed.setVersion(item.getVersion());
         return managed;
     }
 

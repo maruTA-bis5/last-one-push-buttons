@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:comp="http://xmlns.jcp.org/jsf/composite/component">
+
+    <h:head />
+    <h:body>
+    <h:form>
+        <h1>最後の1個になったときに押すボタン</h1>
+        <p:growl globalOnly="true">
+            <p:autoUpdate />
+        </p:growl>
+        <div class="ui-g">
+            <p:outputLabel styleClass="ui-g-12 ui-md-4" for="itemName" value="名前" />
+            <p:inputText styleClass="ui-g-12 ui-md-8" id="itemName" value="#{editViewController.itemName}" required="true" />
+
+            <p:outputLabel styleClass="ui-g-12 ui-md-4" for="itemDescription" value="説明" />
+            <p:inputText styleClass="ui-g-12 ui-md-8" id="itemDescription" value="#{editViewController.itemDescription}" />
+
+            <p:commandButton value="更新" action="#{editViewController.updateItem}" />
+            <p:commandButton value="キャンセル" immediate="true" action="index?faces-redirect=true" />
+        </div>
+    </h:form>
+    </h:body>
+</html>
