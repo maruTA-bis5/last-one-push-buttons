@@ -5,7 +5,7 @@
 
 	<groupId>net.bis5.tools</groupId>
 	<artifactId>last-one-push-buttons</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>last-one-push-buttons</name>
 	<url>https://github.com/maruTA-bis5/last-one-push-buttons</url>
@@ -21,7 +21,7 @@
 		<url>https://github.com/maruTA-bis5/last-one-push-buttons</url>
 		<connection>scm:git:git://github.com/maruTA-bis5/last-one-push-buttons.git</connection>
 		<developerConnection>scm:git:git@github.com:maruTA-bis5/last-one-push-buttons.git</developerConnection>
-		<tag>v1.0.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<properties>
