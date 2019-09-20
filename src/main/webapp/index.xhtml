@@ -9,7 +9,7 @@
     <h:form>
         <h1>最後の1個になったときに押すボタン</h1>
         <p:commandButton value="ボタンを追加する" oncomplete="PF('addItemDialog').show()" />
-        <div class="ui-g">
+        <div>
             <p:repeat value="#{indexViewController.items}" var="item">
                 <comp:itemPanel item="#{item}" />
             </p:repeat>
