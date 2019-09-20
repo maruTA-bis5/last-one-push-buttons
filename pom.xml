@@ -11,6 +11,20 @@
 	<name>last-one-push-buttons</name>
 	<url>https://github.com/maruTA-bis5/last-one-push-buttons</url>
 
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<scm>
+		<url>https://github.com/maruTA-bis5/last-one-push-buttons</url>
+		<connection>scm:git:git://github.com/maruTA-bis5/last-one-push-buttons.git</connection>
+		<developerConnection>scm:git:git@github.com:maruTA-bis5/last-one-push-buttons.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -146,6 +160,13 @@
                     </execution>
                 </executions>
             </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+				</configuration>
+			</plugin>
         </plugins>
 	</build>
 </project>
